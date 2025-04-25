@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\wwwroot\\calendar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\wwwroot\\calendar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karee\\AppData\\Local\\SourceServer\\fed278b53fc5a4783011e7f220e5b8837bd223b54fa004e31bc23b296792351a\\src\\Hangfire.SqlServer\\SqlServerStorageExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\migrations\\20250424003007_create_database.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\migrations\\20250424003007_create_database.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\hubs\\notifyhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\hubs\\notifyhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\controllers\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\controllers\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|d:\\0.0.0.0_final project\\7_deadline tasks\\calender_notifications solutions\\calender_notifications\\migrations\\20250424003007_create_database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60CA1122-071B-4485-9009-25715EAA5B18}|Calender_Notifications\\Calender_Notifications.csproj|solutionrelative:calender_notifications\\migrations\\20250424003007_create_database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Services\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Calender_Notifications\\Services\\INotificationService.cs",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Services\\INotificationService.cs",
+              "RelativeToolTip": "Calender_Notifications\\Services\\INotificationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:40:51.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "Calender_Notifications\\Controllers\\EventsController.cs",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "Calender_Notifications\\Controllers\\EventsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF0AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:44:15.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Program.cs",
+              "RelativeDocumentMoniker": "Calender_Notifications\\Program.cs",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Program.cs",
+              "RelativeToolTip": "Calender_Notifications\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:18:56.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Calender_Notifications\\Services\\NotificationService.cs",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Calender_Notifications\\Services\\NotificationService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAADIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:41:35.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Calender_Notifications\\appsettings.Development.json",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\appsettings.Development.json",
+              "RelativeToolTip": "Calender_Notifications\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAACSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-24T00:31:32.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NotifyHub.cs",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Hubs\\NotifyHub.cs",
+              "RelativeDocumentMoniker": "Calender_Notifications\\Hubs\\NotifyHub.cs",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Hubs\\NotifyHub.cs",
+              "RelativeToolTip": "Calender_Notifications\\Hubs\\NotifyHub.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:42:14.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "calendar.html",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\wwwroot\\calendar.html",
+              "RelativeDocumentMoniker": "Calender_Notifications\\wwwroot\\calendar.html",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\wwwroot\\calendar.html",
+              "RelativeToolTip": "Calender_Notifications\\wwwroot\\calendar.html",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAAAJUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-24T00:56:28.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SqlServerStorageExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\karee\\AppData\\Local\\SourceServer\\fed278b53fc5a4783011e7f220e5b8837bd223b54fa004e31bc23b296792351a\\src\\Hangfire.SqlServer\\SqlServerStorageExtensions.cs",
+              "ToolTip": "C:\\Users\\karee\\AppData\\Local\\SourceServer\\fed278b53fc5a4783011e7f220e5b8837bd223b54fa004e31bc23b296792351a\\src\\Hangfire.SqlServer\\SqlServerStorageExtensions.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAIwCEAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:58:21.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20250424003007_Create_Database.Designer.cs",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Migrations\\20250424003007_Create_Database.Designer.cs",
+              "RelativeDocumentMoniker": "Calender_Notifications\\Migrations\\20250424003007_Create_Database.Designer.cs",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Migrations\\20250424003007_Create_Database.Designer.cs",
+              "RelativeToolTip": "Calender_Notifications\\Migrations\\20250424003007_Create_Database.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:51:26.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Calender_Notifications\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Calender_Notifications\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:52:56.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Calender_Notifications\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Calender_Notifications\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:17:55.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Event.cs",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Controllers\\Event.cs",
+              "RelativeDocumentMoniker": "Calender_Notifications\\Controllers\\Event.cs",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Controllers\\Event.cs",
+              "RelativeToolTip": "Calender_Notifications\\Controllers\\Event.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:18:22.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20250424003007_Create_Database.cs",
+              "DocumentMoniker": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Migrations\\20250424003007_Create_Database.cs",
+              "RelativeDocumentMoniker": "Calender_Notifications\\Migrations\\20250424003007_Create_Database.cs",
+              "ToolTip": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\Migrations\\20250424003007_Create_Database.cs",
+              "RelativeToolTip": "Calender_Notifications\\Migrations\\20250424003007_Create_Database.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:30:08.111Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

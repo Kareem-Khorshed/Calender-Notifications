@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8" />
+    <title>تقويم ومُنبِّهات</title>
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            padding: 1rem;
+            margin: 0;
+        }
+
+        #calendar {
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+        /* حاوية التنبيهات */
+        #toast {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+            /* نمط رسالة التنبيه */
+            #toast div {
+                background: rgba(0, 0, 0, 0.85);
+                color: #fff;
+                padding: 0.75rem 1rem;
+                border-radius: 4px;
+                animation: fadein 0.3s, fadeout 0.3s ease-out 4.7s;
+                min-width: 200px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>تقويم المواعيد</h1>
+    <!-- فورم إضافة حدث -->
+    <form id="evtForm">
+        <label>
+            عنوان الحدث:
+            <input type="text" id="title" name="title" placeholder="أدخل عنوانًا" required />
+        </label>
+        <label>
+            وقت البدء:
+            <input type="datetime-local" id="startLocal" name="startLocal" required />
+        </label>
+        <label>
+            دقائق قبل التنبيه:
+            <input type="number" id="notifyBefore" name="notifyBefore" value="10" min="1" required />
+        </label>
+        <label>
+            المنطقة الزمنية:
+            <select id="timeZoneId" name="timeZoneId">
+                <option value="Africa/Cairo">Africa/Cairo</option>
+            </select>
+        </label>
+        <button type="submit">أضف الحدث</button>
+    </form>
+    <div id="calendar"></div>
+    <!-- حاوية التنبيهات -->
+    <div id="toast"></div>
+    <!-- مكتبات JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.9/signalr.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // جلب الأحداث
+            const resp = await fetch('/api/events');
+            const events = resp.ok ? await resp.json() : [];
+
+            // إعداد التقويم
+            const calendar = new FullCalendar.Calendar(
+                document.getElementById('calendar'), {
+                initialView: 'dayGridMonth',
+                locale: 'ar',
+                timeZone: 'local',
+                events: events.map(e => ({ id: e.id, title: e.title, start: moment(e.start).local().format() }))
+            }
+            );
+            calendar.render();
+
+            // إضافة حدث جديد
+            document.getElementById('evtForm').addEventListener('submit', async e => {
+                e.preventDefault();
+                const dto = {
+                    title: document.getElementById('title').value,
+                    description: '',
+                    startLocal: document.getElementById('startLocal').value,
+                    notifyBefore: +document.getElementById('notifyBefore').value,
+                    timeZoneId: document.getElementById('timeZoneId').value
+                };
+                const result = await fetch('/api/events', {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(dto)
+                });
+                if (result.ok) calendar.addEvent({ title: dto.title, start: dto.startLocal });
+            });
+
+            // إعداد SignalR مع إعادة الاتصال
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl('/notifyhub')
+                .withAutomaticReconnect()
+                .configureLogging(signalR.LogLevel.Error)
+                .build();
+            connection.on('ReceiveReminder', data => showToast(
+                `تذكير: ${data.title} عند ${moment(data.startUtc).local().format('HH:mm, YYYY-MM-DD')}`
+            ));
+            await connection.start();
+        });
+
+        // دالة عرض التنبيه (Toast)
+        function showToast(msg) {
+            const div = document.createElement('div');
+            div.textContent = msg;
+            document.getElementById('toast').append(div);
+            setTimeout(() => div.remove(), 5000);
+        }
+    </script>
+</body>
+</html>

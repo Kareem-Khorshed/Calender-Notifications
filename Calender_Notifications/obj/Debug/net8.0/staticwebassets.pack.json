@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\wwwroot\\calendar.html",
+      "PackagePath": "staticwebassets\\calendar.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Calender_Notifications.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Calender_Notifications.props",
+      "PackagePath": "build\\Calender_Notifications.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Calender_Notifications.props",
+      "PackagePath": "buildMultiTargeting\\Calender_Notifications.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Calender_Notifications.props",
+      "PackagePath": "buildTransitive\\Calender_Notifications.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

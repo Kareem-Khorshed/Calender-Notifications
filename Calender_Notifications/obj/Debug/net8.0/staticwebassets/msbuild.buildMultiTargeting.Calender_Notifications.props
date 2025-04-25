@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Calender_Notifications.props" />
+</Project>

@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "y27VUJ7IudAggrU5q/TybRZIcI+YsfQ+KvBNRm/Ie2E=",
+  "Source": "Calender_Notifications",
+  "BasePath": "_content/Calender_Notifications",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Calender_Notifications\\wwwroot",
+      "Source": "Calender_Notifications",
+      "ContentRoot": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\wwwroot\\",
+      "BasePath": "_content/Calender_Notifications",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\wwwroot\\calendar.html",
+      "SourceId": "Calender_Notifications",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\0.0.0.0_Final Project\\7_DeadLine Tasks\\Calender_Notifications Solutions\\Calender_Notifications\\wwwroot\\",
+      "BasePath": "_content/Calender_Notifications",
+      "RelativePath": "calendar.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\calendar.html"
+    }
+  ]
+}
