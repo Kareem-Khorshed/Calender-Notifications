@@ -17,34 +17,22 @@ namespace Calender_Notifications.Services
 
         public async Task SendEventReminder(Guid eventId)
         {
-            Console.WriteLine($"[Reminder] SendEventReminder called for {eventId} at {DateTime.UtcNow}");
-
             var ev = await _db.Events.FindAsync(eventId);
-            if (ev == null)
+            if (ev == null || ev.IsNotified)
             {
-                Console.WriteLine("[Reminder] Event not found!");
-                return;
-            }
-            if (ev.IsNotified)
-            {
-                Console.WriteLine($"[Reminder] Event {eventId} already notified.");
                 return;
             }
 
-            Console.WriteLine($"[Reminder] Found event '{ev.Title}', scheduling notification...");
-
-            // Broadcast to all connected clients
+            // Send notification to all connected clients
             await _hub.Clients.All.SendAsync("ReceiveReminder", new
             {
                 title = ev.Title,
                 startUtc = ev.StartUtc
             });
-            Console.WriteLine("[Reminder] Sent ReceiveReminder to all clients");
 
-            // Mark as notified
+            // Mark event as notified
             ev.IsNotified = true;
             await _db.SaveChangesAsync();
-            Console.WriteLine("[Reminder] Event marked as notified in database");
         }
     }
 }

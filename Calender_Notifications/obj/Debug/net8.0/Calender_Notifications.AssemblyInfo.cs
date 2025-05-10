@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Calender_Notifications")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc2ae45c49078d624d14c174c2c5105a6393c07d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Calender_Notifications")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Calender_Notifications")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\bin\Debug\net8.0\appsettings.Development.json
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\bin\Debug\net8.0\appsettings.json
+D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\bin\Debug\net8.0\Calender_Notifications.staticwebassets.runtime.json
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\bin\Debug\net8.0\Calender_Notifications.exe
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\bin\Debug\net8.0\Calender_Notifications.deps.json
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\bin\Debug\net8.0\Calender_Notifications.runtimeconfig.json
@@ -171,6 +172,7 @@ D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calen
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\obj\Debug\net8.0\Calender_Notifications.csproj.CoreCompileInputs.cache
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\obj\Debug\net8.0\Calender_Notifications.MvcApplicationPartsAssemblyInfo.cs
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\obj\Debug\net8.0\Calender_Notifications.MvcApplicationPartsAssemblyInfo.cache
+D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\obj\Debug\net8.0\Calender_Notifications.sourcelink.json
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\obj\Debug\net8.0\staticwebassets.build.json
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\obj\Debug\net8.0\staticwebassets.development.json
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\obj\Debug\net8.0\staticwebassets\msbuild.Calender_Notifications.Microsoft.AspNetCore.StaticWebAssets.props
@@ -185,4 +187,3 @@ D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calen
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\obj\Debug\net8.0\Calender_Notifications.pdb
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\obj\Debug\net8.0\Calender_Notifications.genruntimeconfig.cache
 D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\obj\Debug\net8.0\ref\Calender_Notifications.dll
-D:\0.0.0.0_Final Project\7_DeadLine Tasks\Calender_Notifications Solutions\Calender_Notifications\bin\Debug\net8.0\Calender_Notifications.staticwebassets.runtime.json

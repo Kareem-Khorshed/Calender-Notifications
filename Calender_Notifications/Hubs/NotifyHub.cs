@@ -4,6 +4,6 @@ namespace Calender_Notifications.Hubs
 {
     public class NotifyHub : Hub
     {
-        // هنا ممكن تضيف ميثودز لو احتجت later
+        // Hub for broadcasting notifications to connected clients
     }
 }

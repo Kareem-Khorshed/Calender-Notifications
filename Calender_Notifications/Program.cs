@@ -7,63 +7,67 @@ using Hangfire.SqlServer;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1) سجل سياسة CORS
-builder.Services.AddCors(opt =>
-{
-    opt.AddPolicy("AllowAll", policy =>
-    {
-        policy
-            .AllowAnyOrigin()
-            .AllowAnyHeader()
-            .AllowAnyMethod();
-    });
-});
+// 1) Configure CORS
+builder.Services.AddCors(options =>
+    options.AddPolicy("AllowAll", policy =>
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod()));
 
-// 2) Add DbContext
+// 2) Register DbContext with SQL Server
 builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("con")));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 3) Add Hangfire
+// 3) Configure Hangfire (storage + server)
 builder.Services.AddHangfire(cfg =>
-    cfg.UseSqlServerStorage(builder.Configuration.GetConnectionString("con")));
+    cfg.UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddHangfireServer();
 
-// 4) Add SignalR
+// 4) Add SignalR for real-time notifications
 builder.Services.AddSignalR();
 
-// 5) Add NotificationService
+// 5) Register our notification service
 builder.Services.AddScoped<INotificationService, NotificationService>();
 
 // 6) Add Controllers & Swagger
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// 7) فعّل CORS قبل UseRouting
-app.UseCors("AllowAll");
-
+// 7) Enable Developer Exception Page and Swagger in Development
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "CalendarNotify API V1");
+        c.RoutePrefix = "swagger"; // Serve at /swagger
     });
 }
 
-// 8) Hangfire Dashboard
-app.UseHangfireDashboard("/hangfire");
+// 8) Enforce HTTPS and HSTS
+app.UseHttpsRedirection();
+app.UseHsts();
 
-// 9) Static Files from wwwroot
+// 9) Enable CORS) Enable CORS
+app.UseCors("AllowAll");
+
+// 9) Serve static files from wwwroot
 app.UseStaticFiles();
 
-// 10) Routing & Authorization
+// 10) Routing
 app.UseRouting();
+
+// 11) Hangfire Dashboard at /hangfire
+app.UseHangfireDashboard("/hangfire");
+
+// 12) Authorization (if needed)
 app.UseAuthorization();
 
-// 11) Map Endpoints
+// 13) Map endpoints: Controllers and SignalR hub
 app.MapControllers();
 app.MapHub<NotifyHub>("/notifyhub");
 

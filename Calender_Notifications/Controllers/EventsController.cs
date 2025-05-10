@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Hangfire;
 using Calender_Notifications.Data;
 using Calender_Notifications.Services;
-using Hangfire;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Calender_Notifications.Controllers
 {
@@ -24,55 +24,48 @@ namespace Calender_Notifications.Controllers
             _notificationService = notificationService;
         }
 
-        // GET api/events
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var events = await _db.Events
-                .Select(e => new
-                {
-                    e.Id,
-                    title = e.Title,
-                    start = e.StartUtc,
-                    notifyBefore = e.NotifyMinutesBefore
-                })
+                .Select(e => new { e.Id, e.Title, e.StartUtc, e.NotifyMinutesBefore })
                 .ToListAsync();
 
             return Ok(events);
         }
 
-        // POST api/events/trigger/{id}
         [HttpPost("trigger/{id}")]
         public IActionResult Trigger([FromRoute] Guid id)
         {
             _jobs.Enqueue<INotificationService>(svc => svc.SendEventReminder(id));
-            return Ok(new { triggered = true, eventId = id });
+            return Ok(new { triggered = true, id });
         }
 
-        // POST api/events/immediate/{id}
         [HttpPost("immediate/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> Immediate([FromRoute] Guid id)
         {
             await _notificationService.SendEventReminder(id);
-            return Ok(new { success = true, eventId = id });
+            return Ok(new { success = true, id });
         }
 
-        // POST api/events
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateEventDto dto)
         {
             var tz = TimeZoneInfo.FindSystemTimeZoneById(dto.TimeZoneId);
-            var startUtc = TimeZoneInfo.ConvertTimeToUtc(dto.StartLocal, tz);
+            var unspecifiedLocal = DateTime.SpecifyKind(dto.StartLocal, DateTimeKind.Unspecified);
+            var startUtc = TimeZoneInfo.ConvertTimeToUtc(unspecifiedLocal, tz);
+
 
             var ev = new Event
             {
-                UserId = User.Identity?.Name ?? "anonymous",
+                UserId = User.Identity?.Name ?? string.Empty,
                 Title = dto.Title,
                 Description = dto.Description,
                 StartUtc = startUtc,
                 NotifyMinutesBefore = dto.NotifyBefore
             };
+
             _db.Events.Add(ev);
             await _db.SaveChangesAsync();
 
@@ -83,7 +76,69 @@ namespace Calender_Notifications.Controllers
             ev.HangfireJobId = jobId;
             await _db.SaveChangesAsync();
 
-            return Ok(new { ev.Id, ev.StartUtc });
+            return Ok(new { ev.Id, startUtc });
+        }
+
+        [HttpPost("reactivate/{id}")]
+        public async Task<IActionResult> Reactivate(Guid id)
+        {
+            var ev = await _db.Events.FindAsync(id);
+            if (ev == null) return NotFound();
+
+            ev.IsNotified = false;
+            await _db.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, [FromBody] CreateEventDto dto)
+        {
+            var ev = await _db.Events.FindAsync(id);
+            if (ev == null) return NotFound();
+
+            var tz = TimeZoneInfo.FindSystemTimeZoneById(dto.TimeZoneId);
+            var unspecifiedLocal = DateTime.SpecifyKind(dto.StartLocal, DateTimeKind.Unspecified);
+            var newStartUtc = TimeZoneInfo.ConvertTimeToUtc(unspecifiedLocal, tz);
+
+
+
+            ev.Title = dto.Title;
+            ev.Description = dto.Description;
+            ev.StartUtc = newStartUtc;
+            ev.NotifyMinutesBefore = dto.NotifyBefore;
+            ev.IsNotified = false;
+
+            if (!string.IsNullOrEmpty(ev.HangfireJobId))
+            {
+                BackgroundJob.Delete(ev.HangfireJobId);
+            }
+
+            var newJobId = _jobs.Schedule<INotificationService>(
+                svc => svc.SendEventReminder(ev.Id),
+                newStartUtc.AddMinutes(-dto.NotifyBefore));
+
+            ev.HangfireJobId = newJobId;
+
+            await _db.SaveChangesAsync();
+
+            return Ok(new { updated = true, ev.Id });
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var ev = await _db.Events.FindAsync(id);
+            if (ev == null) return NotFound();
+
+            if (!string.IsNullOrEmpty(ev.HangfireJobId))
+            {
+                BackgroundJob.Delete(ev.HangfireJobId);
+            }
+
+            _db.Events.Remove(ev);
+            await _db.SaveChangesAsync();
+
+            return Ok(new { deleted = true, ev.Id });
         }
     }
 

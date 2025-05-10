@@ -1,12 +1,14 @@
-﻿
-public class Event
+﻿namespace Calender_Notifications.Data
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
-    public string UserId { get; set; } = default!;
-    public string Title { get; set; } = default!;
-    public string? Description { get; set; }
-    public DateTime StartUtc { get; set; }
-    public int NotifyMinutesBefore { get; set; }
-    public bool IsNotified { get; set; } = false;
-    public string? HangfireJobId { get; set; }   // نخزن Job ID لو حابب تلغيه
+    public class Event
+    {
+        public Guid Id { get; set; } = Guid.NewGuid();
+        public string UserId { get; set; } = string.Empty;
+        public string Title { get; set; } = string.Empty;
+        public string? Description { get; set; }
+        public DateTime StartUtc { get; set; }
+        public int NotifyMinutesBefore { get; set; }
+        public bool IsNotified { get; set; }
+        public string? HangfireJobId { get; set; }
+    }
 }
