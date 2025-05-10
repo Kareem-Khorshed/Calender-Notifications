@@ -108,11 +108,13 @@
         <div class="flex flex-wrap gap-1 max-w-full">
           <button data-id="${arg.event.id}" class="edit-btn bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600">✏️ تعديل</button>
           <button data-id="${arg.event.id}" class="reactivate-btn bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600">🔄 تنشيط</button>
+          <button data-id="${arg.event.id}" class="delete-btn bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">🗑️ حذف</button>
         </div>
       </div>
     `
                     };
                 }
+
 
 
 
@@ -148,9 +150,11 @@
                 }
             });
 
-            calendarEl.addEventListener('click', e => {
+            calendarEl.addEventListener('click', e =>
+            {
                 const editBtn = e.target.closest('.edit-btn');
                 const reactivateBtn = e.target.closest('.reactivate-btn');
+                const deleteBtn = e.target.closest('.delete-btn');
 
                 if (editBtn) {
                     const id = editBtn.dataset.id;
@@ -169,6 +173,24 @@
                         .then(() => showToast(`تم تنشيط الحدث رقم ${id}`))
                         .catch(() => showToast('فشل في التنشيط'));
                 }
+
+                if (deleteBtn) {
+                    const id = deleteBtn.dataset.id;
+                    if (confirm('هل أنت متأكد أنك تريد حذف هذا الحدث؟')) {
+                        fetch(`/api/events/${id}`, { method: 'DELETE' })
+                            .then(res => {
+                                if (res.ok) {
+                                    const event = calendar.getEventById(id);
+                                    if (event) event.remove();
+                                    showToast('تم حذف الحدث بنجاح');
+                                } else {
+                                    showToast('فشل حذف الحدث');
+                                }
+                            })
+                            .catch(() => showToast('حدث خطأ أثناء الحذف'));
+                    }
+                }
+
             });
 
             document.getElementById('saveEditBtn').addEventListener('click', async () => {
@@ -209,6 +231,24 @@
                 currentEditEvent = null;
             });
         })();
+        const deleteBtn = e.target.closest('.delete-btn');
+
+        if (deleteBtn) {
+            const id = deleteBtn.dataset.id;
+            if (confirm('هل أنت متأكد من حذف الحدث؟')) {
+                fetch(`/api/events/${id}`, { method: 'DELETE' })
+                    .then(res => {
+                        if (res.ok) {
+                            const event = calendar.getEventById(id);
+                            event.remove();
+                            showToast('تم حذف الحدث بنجاح');
+                        } else {
+                            showToast('فشل في حذف الحدث');
+                        }
+                    });
+            }
+        }
+
     </script>
 
     <!-- Modal التعديل الديناميكي -->
